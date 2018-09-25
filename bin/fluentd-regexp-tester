@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'fluentd_regexp_tester/cli'
+
+FluentdRegexpTester::CLI.start(ARGV)
