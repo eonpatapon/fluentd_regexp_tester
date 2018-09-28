@@ -11,11 +11,11 @@ module FluentdRegexpTester
     def test(regexp, input)
       error, parsed, parsed_time = FluentdRegexpTester.parse(input, regexp)
       if error != nil
-        puts error
+        STDERR.puts error
         exit!
       end
       if parsed == nil
-        puts "Nothing was parsed"
+        STDERR.puts "Nothing was parsed"
         exit!
       end
       puts parsed.inspect
