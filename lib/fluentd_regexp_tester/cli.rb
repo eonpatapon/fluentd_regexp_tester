@@ -15,7 +15,7 @@ module FluentdRegexpTester
         exit!
       end
       if parsed == nil
-        STDERR.puts "Nothing was parsed"
+        STDERR.puts "Failed to parse '#{input}' with '#{regexp}'"
         exit!
       end
       puts parsed.inspect
